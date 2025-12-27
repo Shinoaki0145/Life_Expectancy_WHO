@@ -123,12 +123,18 @@ The project investigates **7 meaningful questions**:
 Life_Expectancy_WHO/
 │
 ├── data/
-│   └── Life-Expectancy-Data-Updated.csv    # Raw dataset
+│   └── Life-Expectancy-Data-Updated.csv      # Dataset
 │
+├── documentation/
+│   └── Team Plan and Work Distribution.pdf
+|
 ├── src/
-│   └── main.ipynb                           # Main analysis notebook
-│
-└── README.md                                # This file
+│   ├── 01_data_exploration.ipynb            # Data loading and exploration
+│   ├── 02_meaningful_questions.ipynb        # Research analysis
+│   └── 03_project_summary.ipynb             # Summary and reflections
+|
+├── requirements.txt                         # Python dependencies
+└── README.md                                # Project documentation
 ```
 
 ---
@@ -195,18 +201,25 @@ statsmodels>=0.14.0
 
 ## How to Run
 
-
 1. Open the project folder in VS Code
 2. Install the Python and Jupyter extensions
-3. Open `src/main.ipynb`
-4. Select Python kernel and run all cells
+3. Navigate to the `src/` folder
 
 ### Execution Order
-The notebook is designed to run sequentially:
-1. **Section 1-3**: Dataset information and loading
-2. **Section 4**: Data exploration and preprocessing
-3. **Section 5**: Analysis of 7 research questions
-4. **Section 6**: Project summary and reflections
+The project is split into 3 notebooks designed to run sequentially:
+
+| Notebook | Description | Content |
+|----------|-------------|---------|
+| `01_data_exploration.ipynb` | Data loading and exploration | Dataset information, data quality checks, preprocessing |
+| `02_meaningful_questions.ipynb` | Research analysis | Analysis of 7 research questions with visualizations |
+| `03_project_summary.ipynb` | Summary and reflections | Key findings, limitations, future directions |
+
+**Steps:**
+1. Open and run `01_data_exploration.ipynb` first
+2. Then run `02_meaningful_questions.ipynb`
+3. Finally run `03_project_summary.ipynb`
+
+> **Note:** Each notebook must be run in order as later notebooks may depend on insights or data structures established in earlier ones.
 
 ---
 
